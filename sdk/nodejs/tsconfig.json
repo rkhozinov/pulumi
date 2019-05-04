@@ -42,6 +42,7 @@
         "query/operators.ts",
         "query/sources.ts",
         "query/queryable.ts",
+        "query/util.ts",
 
         "runtime/index.ts",
         "runtime/closure/v8.ts",

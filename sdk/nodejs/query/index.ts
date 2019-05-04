@@ -17,16 +17,16 @@
 // interfaces in case we decide to change the implementation drastically later.
 //
 
-import { EnumerablePromiseImpl } from "./enumerablePromise";
-import { EnumerablePromise } from "./interfaces";
+import { IterablePromiseImpl } from "./enumerablePromise";
+import { IterablePromise } from "./interfaces";
 
-export { Enumerable, EnumerablePromise } from "./interfaces";
+export { IterablePromise } from "./interfaces";
 export { Queryable, QueryableCustomResource } from "./queryable";
 
-export function from<T>(source: T[] | Promise<T[]>): EnumerablePromise<T> {
-    return EnumerablePromiseImpl.from(source);
+export function from<T>(source: T[] | Promise<T[]>): IterablePromise<T> {
+    return IterablePromiseImpl.from(source);
 }
 
-export function range(start: number, stop?: number): EnumerablePromise<number> {
-    return EnumerablePromiseImpl.range(start, stop);
+export function range(start: number, stop?: number): IterablePromise<number> {
+    return IterablePromiseImpl.range(start, stop);
 }
